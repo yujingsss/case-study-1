@@ -1,0 +1,71 @@
+html {
+    box-sizing: border-box;
+    background-color: black;
+}
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+}
+  
+body {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    margin: 2em;
+    color: white;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    cursor: crosshair;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    user-select: none;
+}
+nav a {
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 0 0.5em 0.5em 0.5em;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+button {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background-color: transparent;
+    border: none;
+}
+.scroll-wrapper {
+    width: 200vw;
+    max-width: 200vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    animation-name: horizontalScroll;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+main a {
+    margin: 2rem;
+    font-size: 10rem;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+    /* -webkit-background-clip: text; */
+}
+
+@keyframes horizontalScroll {
+    0% {left: -400px;}
+    100% {left: 0;}
+}
