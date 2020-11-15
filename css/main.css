@@ -12,6 +12,7 @@ body {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     margin: 2em;
     color: white;
+    user-select: none;
 }
 a {
     color: white;
@@ -34,12 +35,18 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+.sub-nav {
+    display: none;
+}
+.nav-works:hover .sub-nav {
+    display: inline;
+}
 button {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     background-color: transparent;
     border: none;
 }
-.scroll-wrapper {
+/* .scroll-wrapper {
     width: 200vw;
     max-width: 200vw;
     height: 100%;
@@ -55,7 +62,7 @@ button {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
-}
+} */
 main a {
     margin: 2rem;
     font-size: 10rem;
